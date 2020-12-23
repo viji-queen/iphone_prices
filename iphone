@@ -1,0 +1,15 @@
+import pandas
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+data = pandas.read_csv(r'C:\Users\ELCOT\PycharmProjects\iphone prices\iphone prices new.csv')
+model=LinearRegression()
+model.fit(data[['Version']], data[['Price']])
+print(model.predict([[14]]))
+print(model.predict([[15]]))
+
+
+
+
+#plt.scatter(data['Version'],data['Price'])
+#plt.show()
+#print(data)
